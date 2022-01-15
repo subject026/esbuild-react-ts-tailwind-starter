@@ -10,7 +10,7 @@
     "dev": "concurrently 'yarn:dev:*'",
     "prod:js": "node scripts/build.js",
     "prod:css": "tailwindcss -o dist/bundle.css",
-    "build": "concurrently 'yarn:prod:*'",
+    "prod": "concurrently 'yarn:prod:*'",
     "// dev": "esbuild src/app.tsx --bundle --watch --sourcemap --target=chrome58,firefox57,safari11,edge16",
     "// build": "esbuild src/app.tsx --bundle --outfile=dist/out.js"
   },

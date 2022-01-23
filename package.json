@@ -5,11 +5,11 @@
   "author": "subject026",
   "license": "MIT",
   "scripts": {
-    "dev:css": "tailwindcss -o dist/bundle.css --watch",
+    "dev:css": "tailwindcss -i src/css/index.css -o dist/bundle.css --watch",
     "dev:js": "node scripts/dev.js",
     "dev": "concurrently 'yarn:dev:*'",
     "prod:js": "node scripts/build.js",
-    "prod:css": "tailwindcss -o dist/bundle.css",
+    "prod:css": "tailwindcss -i src/css/index.css -o dist/bundle.css",
     "prod": "concurrently 'yarn:prod:*'",
     "// dev": "esbuild src/app.tsx --bundle --watch --sourcemap --target=chrome58,firefox57,safari11,edge16",
     "// build": "esbuild src/app.tsx --bundle --outfile=dist/out.js"
@@ -21,32 +21,18 @@
   "devDependencies": {
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
     "autoprefixer": "^10.4.2",
-    "esbuild": "^0.14.11",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.15",
     "chokidar": "^3.5.2",
     "concurrently": "^7.0.0",
-    "eslint": "^8.6.0",
+    "esbuild": "^0.14.11",
+    "eslint": "^8.7.0",
+    "eslint-plugin-react": "^7.28.0",
     "fs-extra": "^10.0.0",
-    "live-server": "^1.2.1"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:react",
-      "plugin:prettier"
-    ],
-    "plugins": [
-      "react",
-      "react-hooks",
-      "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 2017
-    },
-    "env": {
-      "es6": true
-    }
+    "live-server": "^1.2.1",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15",
+    "typescript": "^4.5.5"
   }
 }

@@ -7,7 +7,8 @@ const App: React.FC = () => {
         <h1 className="font-bold tracking-wider uppercase md:text-6xl text-gray-900">
           Hi there :)
         </h1>
-        <p className="mt-2">this is an app look</p>
+        <p className="mt-2 mb-8">this is an app look</p>
+        <p className="custom-class monotype">this has a custom class</p>
       </div>
     </div>
   );
